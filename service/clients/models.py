@@ -12,4 +12,4 @@ class Client(models.Model):
         verbose_name_plural = "Клиенты"
 
     def __str__(self):
-        return self.user
+        return f'Client: {self.company_name}'
