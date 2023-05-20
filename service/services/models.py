@@ -33,5 +33,7 @@ class Subscription(models.Model):
     service = models.ForeignKey(Service, related_name="subscription", on_delete=models.PROTECT)
     plan = models.ForeignKey(Plan, related_name="subscription", on_delete=models.PROTECT)
 
+    objects = models.Manager
+
     def __str__(self):
         return f'Client: {self.client}, Service: {self.service}, Plan: {self.plan}'
